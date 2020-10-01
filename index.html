@@ -6,5 +6,42 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>AlcoCalc</title>
   </head>
-  <body></body>
+  <body>
+    <h1>AlcoCalc</h1>
+    <h2>Pubgolf Edition</h2>
+
+    <ol>
+      <li>Set desired volume of alcohol to consume</li>
+      <li>Enter weight and gender of each contestant</li>
+      <li>Pour up your drinks accordingly and start the game!</li>
+    </ol>
+
+    <form class="game-settings">
+      <label for="chug-size">Size of chug glass (ml)</label>
+      <input type="number" name="chug-size" id="chug-size" placeholder="500" />
+      <label for="percentage">Percentage of alcohol (%)</label>
+      <input type="number" name="percent" id="percentage" placeholder="5" />
+      <label for="min-equilizer">Minimum equilizer shot size</label>
+      <input type="number" name="min-equilizer" id="min-equilizer" />
+    </form>
+
+    <form class="user-variables">
+      <label for="user">Name</label>
+      <input type="text" name="user" id="user" />
+      <label for="weight">Weight</label>
+      <input type="number" name="weight" id="weight" />
+      <input type="radio" name="gender" id="male" value="male" />
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="female" value="female" />
+      <label for="female">Female</label>
+    </form>
+
+    <table>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Equilizer</th>
+      </tr>
+    </table>
+  </body>
 </html>
