@@ -3,12 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>AlcoCalc</title>
   </head>
   <body>
-    <h1>AlcoCalc</h1>
-    <h2>Pubgolf Edition</h2>
+    <header>
+      <h1>AlcoCalc</h1>
+      <h2>Pubgolf Edition</h2>
+    </header>
 
     <ol>
       <li>Set desired volume of alcohol to consume</li>
@@ -17,31 +27,83 @@
     </ol>
 
     <form class="game-settings">
-      <label for="chug-size">Size of chug glass (ml)</label>
-      <input type="number" name="chug-size" id="chug-size" placeholder="500" />
-      <label for="percentage">Percentage of alcohol (%)</label>
-      <input type="number" name="percent" id="percentage" placeholder="5" />
-      <label for="min-equilizer">Minimum equilizer shot size</label>
-      <input type="number" name="min-equilizer" id="min-equilizer" />
+      <h3>Game Settings</h3>
+      <div class="form-group">
+        <label for="chug-size">Size of chug glass (ml)</label>
+        <input
+          type="number"
+          name="chug-size"
+          id="chug-size"
+          placeholder="500"
+        />
+      </div>
+      <div class="form-group">
+        <label for="percentage">Percentage of alcohol (%)</label>
+        <input type="number" name="percent" id="percentage" placeholder="5" />
+      </div>
+      <div class="form-group">
+        <label for="min-equilizer">Minimum equilizer shot size</label>
+        <input
+          type="number"
+          name="min-equilizer"
+          id="min-equilizer"
+          placeholder="1"
+        />
+      </div>
     </form>
 
-    <form class="user-variables">
-      <label for="user">Name</label>
-      <input type="text" name="user" id="user" />
-      <label for="weight">Weight</label>
-      <input type="number" name="weight" id="weight" />
-      <input type="radio" name="gender" id="male" value="male" />
-      <label for="male">Male</label>
-      <input type="radio" name="gender" id="female" value="female" />
-      <label for="female">Female</label>
+    <form class="user-input">
+      <h3>User Input</h3>
+      <div class="form-group">
+        <label for="user">Name</label>
+        <input type="text" name="user" id="user" placeholder="John Smith" />
+      </div>
+      <div class="form-group">
+        <label for="weight">Weight (kg)</label>
+        <input type="number" name="weight" id="weight" placeholder="60.2" />
+      </div>
+      <div class="radios">
+        <input type="radio" name="gender" id="male" value="male" />
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female" />
+        <label for="female">Female</label>
+      </div>
     </form>
 
-    <table>
-      <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>Equilizer</th>
-      </tr>
-    </table>
+    <div class="ranking">
+      <h3>Ranking</h3>
+      <table>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Equilizer</th>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+    </div>
   </body>
 </html>
