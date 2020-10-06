@@ -16,13 +16,14 @@ var users = [];
 function getSettings() {
   settings = {
     size: document.querySelector("#chug-size").value,
-    percent: document.querySelector("#percentage").value,
+    // chug_percent: document.querySelector("#chug-percentage").value, # NOT USED
     alcGr:
       (8 *
         document.querySelector("#chug-size").value *
-        document.querySelector("#percentage").value) /
+        document.querySelector("#chug-percentage").value) /
       1000,
     equalizer: document.querySelector("#min-equalizer").value,
+    eq_percent: document.querySelector("#eq-percentage").value,
   };
 }
 
@@ -74,7 +75,7 @@ function calculate() {
     var customShot = (totalSpirit + settings.equalizer) * percInc - totalSpirit; // 40 is ml worth of
 */
     var percInc = users[users.length - 1].bac / users[i].bac;
-    var totalSpirit = settings.alcGr / ((8 * 1 * 40) / 1000); // total spirit in ml found in chug drink
+    var totalSpirit = settings.alcGr / ((8 * 1 * settings.eq_percent) / 1000); // total spirit in ml found in chug drink
     var customShot =
       (totalSpirit + Number(settings.equalizer)) * percInc - totalSpirit; // 40 is ml worth of
 

@@ -26,25 +26,29 @@
       <h3>Game Settings</h3>
       <div class="form-group">
         <label for="chug-size">Size of chug glass (ml)</label>
-        <input
-          type="number"
-          name="chug-size"
-          id="chug-size"
-          placeholder="500"
-        />
+        <input type="text" name="chug-size" id="chug-size" placeholder="500" />
       </div>
       <div class="form-group">
-        <label for="percentage">Percentage of alcohol (%)</label>
-        <input type="number" name="percent" id="percentage" placeholder="5" />
+        <label for="chug-percentage">Percentage of alcohol (%)</label>
+        <input
+          type="text"
+          name="percent"
+          id="chug-percentage"
+          placeholder="5"
+        />
       </div>
       <div class="form-group">
         <label for="min-equalizer">Minimum equalizer shot size (ml)</label>
         <input
-          type="number"
+          type="text"
           name="min-equalizer"
           id="min-equalizer"
           placeholder="20"
         />
+      </div>
+      <div class="form-group">
+        <label for="eq-percentage">Percentage of alcohol (%)</label>
+        <input type="text" name="percent" id="eq-percentage" placeholder="40" />
       </div>
       <button type="button" id="set">Set</button>
     </form>
@@ -57,7 +61,7 @@
       </div>
       <div class="form-group">
         <label for="weight">Weight (kg)</label>
-        <input type="number" name="weight" id="weight" placeholder="60.2" />
+        <input type="text" name="weight" id="weight" placeholder="60.2" />
       </div>
       <div class="radios">
         <input type="radio" name="gender" id="male" value="0.68" />
