@@ -86,3 +86,38 @@ function calculate() {
 }
 
 document.querySelector("#calculate").addEventListener("click", calculate);
+
+// TOGGLE MODAL
+function showModal() {
+  let modal = document.querySelector(".modal-wrapper");
+  modal.style.display = "block";
+
+  let main = document.querySelector("main");
+  main.classList.add("blur");
+}
+
+function hideModal() {
+  let modal = document.querySelector(".modal-wrapper");
+  modal.style.display = "none";
+
+  let main = document.querySelector("main");
+  main.classList.remove("blur");
+}
+
+// MODAL FUNCTION
+function calculatePercent() {
+  let liquorPercent = document.querySelector("#liquor-percentage").value / 100;
+  let liquorVolume = document.querySelector("#liquor-volume").value;
+  let totalDrinkVolume = document.querySelector("#total-volume").value;
+
+  // (liqPerc(0.x) * liqVol(ml)) / totalVol(ml) * 100
+  let drinkPercentage =
+    ((liquorPercent * liquorVolume) / totalDrinkVolume) * 100;
+
+  document.querySelector("#result-percent").innerHTML =
+    drinkPercentage.toFixed(1) + "%";
+}
+
+document
+  .querySelector("#calculate-percent")
+  .addEventListener("click", calculatePercent);
