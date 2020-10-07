@@ -12,7 +12,6 @@ var settings = {};
 var variables = {};
 var users = [];
 
-
 // GAME SETTINGS
 function getSettings() {
   settings = {
@@ -81,7 +80,7 @@ function calculate() {
       (totalSpirit + Number(settings.equalizer)) * percInc - totalSpirit; // 40 is ml worth of
 
     cell3.innerHTML = customShot.toString().slice(0, 4) + "ml";
-}
+  }
 
   old_tbody.parentNode.replaceChild(new_tbody, old_tbody);
 }
@@ -106,3 +105,19 @@ function hideModal() {
 }
 
 // MODAL FUNCTION
+function calculatePercent() {
+  let liquorPercent = document.querySelector("#liquor-percentage").value / 100;
+  let liquorVolume = document.querySelector("#liquor-volume").value;
+  let totalDrinkVolume = document.querySelector("#total-volume").value;
+
+  // (liqPerc(0.x) * liqVol(ml)) / totalVol(ml) * 100
+  let drinkPercentage =
+    ((liquorPercent * liquorVolume) / totalDrinkVolume) * 100;
+
+  document.querySelector("#result-percent").innerHTML =
+    drinkPercentage.toFixed(1) + "%";
+}
+
+document
+  .querySelector("#calculate-percent")
+  .addEventListener("click", calculatePercent);
