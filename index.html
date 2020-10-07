@@ -11,7 +11,7 @@
     <title>AlcoCalc</title>
   </head>
   <body>
-    <main class="blur">
+    <main>
       <div class="header">
         <h1>AlcoCalc</h1>
         <h2>Pubgolf Edition</h2>
@@ -37,7 +37,7 @@
         <div class="form-group">
           <label for="chug-percentage">
             Percentage of alcohol (%)
-            <span class="help-modal" onclick="toggleModal()">&quest;</span>
+            <span class="help-modal" onclick="showModal()">&quest;</span>
           </label>
           <input
             type="text"
@@ -134,7 +134,7 @@
     <!-- MODAL -->
     <div class="modal-wrapper">
       <div class="modal">
-        <span class="exit" onclick="">&#10005;</span>
+        <span class="exit" onclick="hideModal()">&#10005;</span>
         <h1>Calculate Percentage</h1>
         <form>
           <div class="form-group">

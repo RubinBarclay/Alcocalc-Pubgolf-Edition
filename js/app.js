@@ -12,6 +12,7 @@ var settings = {};
 var variables = {};
 var users = [];
 
+
 // GAME SETTINGS
 function getSettings() {
   settings = {
@@ -80,9 +81,28 @@ function calculate() {
       (totalSpirit + Number(settings.equalizer)) * percInc - totalSpirit; // 40 is ml worth of
 
     cell3.innerHTML = customShot.toString().slice(0, 4) + "ml";
-  }
+}
 
   old_tbody.parentNode.replaceChild(new_tbody, old_tbody);
 }
 
 document.querySelector("#calculate").addEventListener("click", calculate);
+
+// TOGGLE MODAL
+function showModal() {
+  let modal = document.querySelector(".modal-wrapper");
+  modal.style.display = "block";
+
+  let main = document.querySelector("main");
+  main.classList.add("blur");
+}
+
+function hideModal() {
+  let modal = document.querySelector(".modal-wrapper");
+  modal.style.display = "none";
+
+  let main = document.querySelector("main");
+  main.classList.remove("blur");
+}
+
+// MODAL FUNCTION
